@@ -1,0 +1,18 @@
+#!/bin/bash
+
+python3 --version
+
+apt-get install libxml2-dev libxslt-dev
+
+# pip --version
+apt-get install python-pip python-dev
+pip --version
+
+pip install dronekit
+pip install pyserial
+
+echo "$(ls /dev/ | grep ttyUSB)"
+echo "$(ls /dev/ | grep ttyACM)"
+echo "$(ls /dev/ | grep ttyTHS)"
+
+python main.py
