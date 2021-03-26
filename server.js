@@ -19,6 +19,7 @@ initRoutes(app);
 
 const server = app.listen(port, hostname, () => {
     const serverAddress = server.address();
-    console.log(`server ${serverAddress.address}:${serverAddress.port} is created.`);
+    const timeStrTitle = new Date(Date.now()).toTimeString();
+    console.log(`[${timeStrTitle}] server ${serverAddress.address}:${serverAddress.port} is created.`);
     // console.log(`app listening on port ${port}.`);
 });
